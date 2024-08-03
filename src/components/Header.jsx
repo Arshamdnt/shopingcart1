@@ -1,3 +1,4 @@
+import React from "react";
 import "./Header.css";
 
 export default function Header({ onCartClick }) {
@@ -10,11 +11,9 @@ export default function Header({ onCartClick }) {
             <li>About</li>
             <li>Store</li>
           </ul>
-          <img src="./shoppingcart.png" alt="" id="shoppingcarticon" onClick={onCartClick} />
+          <img src={`${process.env.PUBLIC_URL}/images/shoppingcart.png`} alt="Shopping Cart" id="shoppingcarticon" onClick={onCartClick} />
         </nav>
       </header>
     </div>
   );
 }
-
-

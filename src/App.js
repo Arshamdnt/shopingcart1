@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Modal from './components/Modal';
 import MainContent from './components/mainContent';
 import './site.css';
-
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -25,6 +24,7 @@ function App() {
       <Header onCartClick={toggleModal} />
       {showModal && <Modal onClose={toggleModal} cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />}
       <MainContent onAddToCart={handleAddToCart} onRemoveFromCart={handleRemoveFromCart} cartItems={cartItems} />
+  
     </div>
   );
 }

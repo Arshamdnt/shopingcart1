@@ -7,14 +7,14 @@ export default function Modal({ onClose, cartItems, onRemoveFromCart }) {
   return (
     <div id="Modal">
       <div id="modal-content">
-        <img src="./removeicon.png" alt="Close" id="RemoveIcon" onClick={onClose} />
+        <img src={`${process.env.PUBLIC_URL}/images/removeicon.png`} alt="Close" id="RemoveIcon" onClick={onClose} />
         <div id="Modal-container">
           {cartItems.length === 0 ? (
             <h3>Your cart is empty</h3>
           ) : (
             cartItems.map((item) => (
               <div key={item.id} className="cart-item">
-                <img src={item.imgUrl} alt={item.Name} />
+                <img src={`${process.env.PUBLIC_URL}${item.imgUrl}`} alt={item.Name} />
                 <div>
                   <h3>{item.Name}</h3>
                   <p>{item.price}$</p>
